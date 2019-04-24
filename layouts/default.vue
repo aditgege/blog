@@ -1,0 +1,25 @@
+<template>
+  <div class="container app">
+    <BaseHeader />
+    <nuxt class="wrapper clearfix" />
+    <BaseFooter />
+  </div>
+</template>
+<script>
+import BaseHeader from '../components/BaseHeader'
+import BaseFooter from '../components/BaseFooter'
+
+export default {
+  name: 'DefaultLayout',
+  components: {
+    BaseFooter,
+    BaseHeader
+  }
+}
+</script>
+<style lang="scss" scoped>
+.wrapper{
+  margin: 1em 0;
+  min-height: 90vh;
+}
+</style>
