@@ -1,7 +1,14 @@
 <template>
   <footer class="footer clearfix">
-    Copyright © 2019 by
+    <span>Copyright © 2019 by</span>
     <a href="#" target="_blank" rel="noopener">AditGege</a>
+    <br>
+    <br>
+    <span>Fork source code in </span>
+    <a
+      href="https://github.com/aditgege/blog"
+      target="_blank"
+      rel="noopener">Github Blog </a>
   </footer>
 </template>
 <script>

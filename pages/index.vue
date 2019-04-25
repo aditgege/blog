@@ -1,35 +1,63 @@
 <template>
-  <section class="container">
-    <div><h1>Hello!</h1></div>
+  <section class="pages">
+    <div
+      v-for="blog in blogs"
+      :key="blog.title"
+      class="pages__item">
+      <nuxt-link
+        :to="`/${blog.slug}`"
+        class="pages__link">
+        <h2 class="pages__title">
+          {{ blog.title }}
+        </h2>
+      </nuxt-link>
+       <div class="meta">
+        <small class="meta__date">{{ formatPostDate(blog.date) }}</small>
+        <small class="dot"> • </small>
+        <small class="meta__read">{{ formatReadingTime(blog.minute2read) }}</small>
+      </div>
+      <div>
+        <p>
+          {{ blog.description }}
+        </p>
+      </div>
+    </div>
   </section>
 </template>
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+<script>
+import Contents from '../contents/index.js'
+import { formatReadingTime, formatPostDate } from '../utils/helper.js'
+export default {
+  name: 'Homepage',
+  data () {
+    return {
+      formatReadingTime,
+      formatPostDate
+    }
+  },
+  async asyncData ({ store }) {
+    async function asyncImport (blogName) {
+      const allMarkdown = await import(`~/contents/markdown/${blogName}/index.md`)
+      return allMarkdown.attributes
+    }
+    return Promise.all(Contents.map(blog => asyncImport(blog)))
+      .then((res) => {
+        return {
+          blogs: res
+        }
+      })
+  }
 }
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-.links {
-  padding-top: 15px;
+</script>
+
+<style lang="scss" scoped>
+.pages {
+  &__title {
+    margin-bottom: .25em;
+  }
+  &__date {
+    color: var(--textSubtitle);
+  }
 }
 </style>
