@@ -1,11 +1,13 @@
 import pkg from './package'
 import Contents from './contents/index.js'
-
+const appTitle = `alakazam`
+const productionUrl = 'https://alakazam.netlify.com/'
 const path = require('path')
 const routes = Contents.map(item => {
   item = `/${item}`
   return item
 })
+
 export default {
   mode: 'spa',
 
@@ -13,20 +15,16 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    title: `${appTitle}`,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description },
 
-      { name: 'theme-color', content: '#ff0000' },
       { name: 'theme-color', content: '#bd93f9' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-      { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon-96x96.png' },
-      { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/android-icon-192x192.png' }
     ],
     noscript: [
       {
@@ -63,11 +61,9 @@ export default {
     { src: '~/plugins/lazyload', ssr: false }
   ],
   sitemap: {
-    path: '/sitemap.xml',
-    hostname: 'https://blog',
+    hostname: productionUrl,
     cacheTime: 1000 * 60 * 15,
-    gzip: true,
-    generate: true
+    gzip: true
   },
   webfontloader: {
     google: {
@@ -79,8 +75,8 @@ export default {
    */
   modules: [
     '@nuxtjs/pwa',
-    '@nuxtjs/sitemap',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    '@nuxtjs/sitemap'
   ],
 
   /*
