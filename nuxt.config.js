@@ -21,7 +21,7 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description },
 
-      { name: 'theme-color', content: '#bd93f9' }
+      { name: 'theme-color', content: '#68B2A0' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
