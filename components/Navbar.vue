@@ -1,14 +1,5 @@
 <template>
   <div class="navbar clearfix">
-    <div class="navbar__profile">
-      <nuxt-link
-        to="/">
-        <img
-          src="/images/profile-rounded.png"
-          alt="@aditgege"
-          class="__img">
-      </nuxt-link>
-    </div>
     <ul class="navbar__item">
       <li>
         <nuxt-link
@@ -29,6 +20,15 @@
         </nuxt-link>
       </li>
     </ul>
+    <div class="navbar__profile">
+      <nuxt-link
+        to="/">
+        <img
+          src="/images/profile-rounded.png"
+          alt="@aditgege"
+          class="__img">
+      </nuxt-link>
+    </div>
   </div>
 </template>
 <script>
@@ -38,20 +38,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 .navbar{
-  background-color: var(--textTitle);
   display: flex;
   margin:0 0 0 auto;
-  &__profile{
-    margin: auto 20px;
-    img{
-      height: 50px;
-
-    }
-  }
   &__item{
-    right: 0;
     display: flex;
     list-style: none;
+    margin: auto 0 auto auto ;
     li{
       font-weight: bold;
       margin: 0 5px;
@@ -61,6 +53,23 @@ export default {
        a:hover{
         text-decoration: none;
       }
+    }
+  }
+  &__profile{
+    margin: auto 0 auto 20px ;
+    background: var(--textLink);
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    img{
+      max-height: 100%;
+      max-width: 100%;
     }
   }
 }

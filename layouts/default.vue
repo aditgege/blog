@@ -1,12 +1,10 @@
 <template>
-  <section>
+  <div class="container app">
     <Navbar/>
-    <div class="container app">
-      <!-- <BaseHeader /> -->
-      <nuxt class="wrapper clearfix" />
-      <BaseFooter />
-    </div>
-  </section>
+    <!-- <BaseHeader /> -->
+    <nuxt class="wrapper clearfix" />
+    <BaseFooter />
+  </div>
 </template>
 <script>
 // import BaseHeader from '../components/BaseHeader'
