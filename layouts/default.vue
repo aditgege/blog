@@ -1,19 +1,24 @@
 <template>
-  <div class="container app">
-    <BaseHeader />
-    <nuxt class="wrapper clearfix" />
-    <BaseFooter />
-  </div>
+  <section>
+    <Navbar/>
+    <div class="container app">
+      <!-- <BaseHeader /> -->
+      <nuxt class="wrapper clearfix" />
+      <BaseFooter />
+    </div>
+  </section>
 </template>
 <script>
-import BaseHeader from '../components/BaseHeader'
+// import BaseHeader from '../components/BaseHeader'
 import BaseFooter from '../components/BaseFooter'
+import Navbar from '../components/Navbar'
 
 export default {
   name: 'DefaultLayout',
   components: {
     BaseFooter,
-    BaseHeader
+    // BaseHeader,
+    Navbar
   }
 }
 </script>

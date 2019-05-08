@@ -67,7 +67,7 @@ export default {
   },
   webfontloader: {
     google: {
-      families: ['Merriweather Sans:400,700']
+      families: ['Roboto Slab:400,700']
     }
   },
   /*

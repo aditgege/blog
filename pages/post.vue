@@ -1,6 +1,5 @@
 <template>
   <section class="pages">
-    <h1>Post 📝</h1>
     <div
       v-for="blog in blogs"
       :key="blog.title"
@@ -23,7 +22,6 @@
         </p>
       </div>
     </div>
-    <h1>Portfolio 🎨</h1>
   </section>
 </template>
 
