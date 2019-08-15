@@ -50,14 +50,14 @@ export default {
       padding: 10px;
       // width: 100px;
       text-align: center;
-       a:hover{
+      a:hover{
         text-decoration: none;
       }
     }
   }
   &__profile{
     margin: auto 0 auto 20px ;
-    background: var(--textLink);
+    // background: var(--textLink);
     display: block;
     width: 40px;
     height: 40px;

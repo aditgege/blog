@@ -1,7 +1,6 @@
 <template>
   <div class="container app">
-    <Navbar/>
-    <!-- <BaseHeader /> -->
+    <Navbar />
     <nuxt class="wrapper clearfix" />
     <BaseFooter />
   </div>

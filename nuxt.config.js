@@ -76,7 +76,10 @@ export default {
   modules: [
     '@nuxtjs/pwa',
     'nuxt-webfontloader',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    ['@nuxtjs/google-adsense', {
+      id: 'ca-pub-4261922086288845'
+    }]
   ],
 
   /*
