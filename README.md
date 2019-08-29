@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fda8a15c-8bcc-4fc8-9708-63711af00ecb/deploy-status)](https://app.netlify.com/sites/alakazam/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fda8a15c-8bcc-4fc8-9708-63711af00ecb/deploy-status)](https://app.netlify.com/sites/alakazam/deploys) [![Greenkeeper badge](https://badges.greenkeeper.io/aditgege/blog.svg)](https://greenkeeper.io/)
 # Blog
 
 > My sweet Nuxt.js project
