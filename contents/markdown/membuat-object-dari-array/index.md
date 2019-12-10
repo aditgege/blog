@@ -37,8 +37,7 @@ const result = array.reduce((acc,curr)=> ({...acc,[cur.color]: cur.id}), {})
 // output {red: 10, blue: 20, green: 30}
 
 ```
----
----
+
 `reduce` is initialized with an empty object (empty `{}` at the end), therefore first iteration variables are `acc = {} cur = { id: 10, color: "red" }`. Function returns an object - this is why function body is wrapped in parentheses `=> ({ ... })`. Spread operator doesn't do anything on the first iteration, so `red: 10 `is set as first item.
 
 On the second iteration variables are` acc = { red: 10 } cur = { id: 20, color: "blue" }`. Here the spread operator expands `acc` and the function returns `{ red: 10, blue: 20 }`.
