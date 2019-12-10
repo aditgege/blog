@@ -5,7 +5,7 @@ date: '2019-10-04'
 minute2read: 15
 description: Membuat object dari suatu array pada javascript
 ---
----
+
 
 Cara simple :
 ```javascript
