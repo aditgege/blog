@@ -20,7 +20,7 @@
     "cross-env": "^5.2.0",
     "modern-normalize": "^0.5.0",
     "node-sass": "^4.12.0",
-    "nuxt": "^2.4.0",
+    "nuxt": "^2.15.8",
     "nuxt-webfontloader": "^1.0.0",
     "prismjs": "^1.16.0",
     "vue-tiny-lazyload-img": "^0.1.0"
